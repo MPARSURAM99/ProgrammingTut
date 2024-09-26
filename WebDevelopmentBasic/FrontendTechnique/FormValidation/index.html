@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="container">
+    <h1>Form fillup 2024</h1> <br>
+
+    <form action="" id="frm">
+
+        <table>
+            <tr>
+                <td>
+                    <label for="">First Name</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Second Number</label>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Mobile">Mobile Number</label> <br>
+                </td>
+                <td>
+                    <input type="number" name="Mobile" id="num" required> <br> <span id="spn" style="color: red;"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Email</label>
+                </td>
+                <td>
+                    <input type="email">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" id="submit">
+                </td>
+            </tr>
+        </table>
+
+    </form>
+   </div>
+
+ <script>
+   
+document.getElementById("num").addEventListener("input", function(){
+    var a = document.getElementById("num").value.length;
+    var b = document.getElementById("spn");
+    if( a === 10){
+        b.innerText = " ";
+    } else {
+        b.innerText = " Invalid input";
+    }
+})
+
+
+    
+
+ </script>
+</body>
+</html>

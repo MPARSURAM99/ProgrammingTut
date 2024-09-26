@@ -1,0 +1,16 @@
+{
+  "name": "npmmodule",
+  "version": "1.0.0",
+  "description": "This is my first npm module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Parsuram",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "npmmodule": "file:",
+    "validator": "^13.11.0"
+  }
+}

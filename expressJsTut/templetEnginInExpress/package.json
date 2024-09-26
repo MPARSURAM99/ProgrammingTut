@@ -1,0 +1,16 @@
+{
+  "name": "templetengininexpress",
+  "version": "1.0.0",
+  "description": "responsive to dynamic data using templates",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Parsuram",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "hbs": "^4.2.0",
+    "templetengininexpress": "file:"
+  }
+}

@@ -1,0 +1,50 @@
+*{
+    background: navy;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    text-align: center;
+}
+
+.container{
+    border: 0px solid white;
+    height: 600px;
+    width: 500px;
+
+    margin: 30px auto ;
+}
+
+table{
+    height: 100%;
+    width: 100%;
+    
+}
+
+td:nth-child(odd){
+    padding: 5%;
+    float: left;
+}
+td:nth-child(even){
+    padding: 5%;
+    float: right;
+}
+#submit{
+    width: 200px;
+    height: 40px;
+    margin-left: 150px;
+
+}
+
+label{
+    
+}
+
+input{
+    height: 30px;
+    width: 200%;
+    background: white;
+    color: black;
+}

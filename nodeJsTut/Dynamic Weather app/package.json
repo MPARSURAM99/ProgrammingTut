@@ -1,0 +1,15 @@
+{
+  "name": "dynamic-weather-app",
+  "version": "1.0.0",
+  "description": "Creating dynamic weather app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Parsuram",
+  "license": "ISC",
+  "dependencies": {
+    "dynamic-weather-app": "file:",
+    "requests": "^0.3.0"
+  }
+}
