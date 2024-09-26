@@ -1,10 +1,13 @@
 package beans;
 
 public class Student {
+//	Declaring the beans;
+	
 	private String name;
 	private int rollNumber;
 	private String email;
-	
+
+//	Creating getter & setter method for the bean objects;
 	public String getName() {
 		return name;
 	}
@@ -24,6 +27,7 @@ public class Student {
 		this.email = email;
 	}
 	
+//	Creating object method;
 	public void display() {
 		System.out.println("Name is " + name);
 		System.out.println("Roll Number is " + rollNumber);

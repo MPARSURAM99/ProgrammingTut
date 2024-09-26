@@ -10,7 +10,16 @@ public class Main {
 		System.out.println("Hello World");
 		System.out.println("========================");
 		
+//		Declaring configuration file location;
 		String configLocation = "configuration/applicationContext.xml";
+		
+//		Add Spring jar files to use application context;
+//		1. Spring core;
+//		2. Spring beans;
+//		3. Spring context;
+//		4. Spring expression;
+//		5. Spring AOP;
+//		6. Common login;
 		ApplicationContext context = new ClassPathXmlApplicationContext(configLocation);
 		
 		Student std1 = (Student) context.getBean("std1");
