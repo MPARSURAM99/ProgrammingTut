@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+	This is a context schema For the annotation based configuration.
+	Copy it from
+	https://docs.spring.io/spring-framework/docs/4.2.x/spring-framework-reference/html/xsd-configuration.html
+	- Enter ctrl-F in this page.
+	- Simply hit enter to find context schema;
+ -->
+ 
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+	
+	<!-- 
+		Here inside the content component scan,
+		Define the bean class package name at the base-package;
+		The spring container will scan the package and will find out the bean;
+	 -->
+	<context:component-scan base-package="beans"></context:component-scan>
+	
+</beans>
