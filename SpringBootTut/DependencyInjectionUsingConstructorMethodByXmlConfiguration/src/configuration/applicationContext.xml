@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+	<bean class="bean.Address" id="add1">
+	<!-- 
+		Here pass the argument serial wise that is defined in the Address class,
+		By constructor-arg tag;
+	 -->
+		<constructor-arg value="Odisha"/>
+		<constructor-arg value="Cuttack"/>
+		<constructor-arg value="Lalitagiri"/>
+	</bean>
+	
+	<bean class="bean.Student" id="std1">
+		<constructor-arg value="Parsuram"/>
+		<constructor-arg value="284"/>
+		<constructor-arg ref="add1"/>
+	</bean>
+</beans>

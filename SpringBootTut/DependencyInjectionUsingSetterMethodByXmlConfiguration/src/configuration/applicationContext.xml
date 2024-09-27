@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean class="beans.Address" id="add1">
+		<property name="state" value="Odisha"/>
+		<property name="district" value="Cuttack"/>
+		<property name="village" value="Lalitagiri"/>
+	</bean>
+    
+	<bean class="beans.Student" id="std1">
+		<property name="name" value="Parsuram"/>
+		<property name="rollNumber" value="284"/>
+		<!-- 
+			Here in address property instead of providing value,
+			Just provide the id of address object for dependency injection in ref tag.
+		 -->
+		<property name="address" ref="add1"/>
+	</bean>
+</beans>
