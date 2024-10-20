@@ -1,0 +1,14 @@
+<div class="main">
+  <h1>Angular Tutorial</h1>
+
+  <!--
+  > Receive the event through the eventemitter object and store it in a variable;
+  > In Angular, $event is a special keyword that refers to the data or event object being emitted or passed when an event occurs.
+    In this code snippet,
+    the event is coming from the messageEvent that is emitted by the child component <app-home> to the parent component.
+ -->
+  <app-home (messageEvent)="receiveMsg($event)"></app-home>
+
+  <!-- Data binding to show the message on the browser -->
+  <h4>{{ msgFromHome }}</h4>
+</div>
