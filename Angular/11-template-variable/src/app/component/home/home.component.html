@@ -1,0 +1,12 @@
+<h1>Home component</h1>
+<!-- Traditional way to get the input value -->
+<!-- <input type="text" (keyup.enter)="onKeyUp($event)" />
+<p>{{ inputValue }}</p> -->
+
+<input
+  type="text"
+  (keyup.enter)="onKeyUp(inputFieldValue.value)"
+  #inputFieldValue
+/>
+
+<p>{{ inputValue }}</p>
