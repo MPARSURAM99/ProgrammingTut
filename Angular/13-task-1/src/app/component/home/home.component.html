@@ -1,0 +1,35 @@
+<section class="window">
+  <div class="main-div">
+    <h1>Post Form</h1>
+    <input type="text" placeholder="Post Title" [(ngModel)]="postTitle" />
+    <input type="text" placeholder="Post Details" [(ngModel)]="postDetails" />
+    <input
+      type="text"
+      placeholder="Enter Image URL"
+      [(ngModel)]="postImageUrl"
+    />
+    <input type="text" placeholder="Enter Post URL" [(ngModel)]="postUrl" />
+    <div>
+      <input type="checkbox" [(ngModel)]="addBackground" />
+      <label for="">Add Background</label>
+    </div>
+  </div>
+
+  <div class="preview">
+    <h1
+      [style.display]="postTitle ? 'block' : 'none'"
+      [class.addBackground]="addBackground"
+    >
+      {{ postTitle }}
+    </h1>
+    <img
+      [src]="postImageUrl"
+      alt="Post Image"
+      [style.display]="postImageUrl ? 'block' : 'none'"
+    />
+    <p>{{ postDetails }}</p>
+    <button [style.display]="postUrl ? 'block' : 'none'">
+      <a [href]="postUrl">Know More</a>
+    </button>
+  </div>
+</section>

@@ -1,0 +1,48 @@
+.window {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.main-div,
+.preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  height: auto;
+}
+
+.main-div h1 {
+  padding: 10px;
+}
+
+.main-div input {
+  padding: 10px;
+}
+
+.preview img {
+  height: 300px;
+  width: 300px;
+}
+
+.preview button {
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid blue;
+}
+
+.preview button a {
+  text-decoration: none;
+}
+
+.preview h1 {
+  display: inline-block;
+  padding: 10px;
+}
+
+.addBackground {
+  background-color: yellow;
+}
