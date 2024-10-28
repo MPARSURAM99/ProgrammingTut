@@ -1,0 +1,13 @@
+.ngClass1 {
+  color: red;
+  text-transform: uppercase;
+}
+
+.ngClass2 {
+  text-decoration: underline;
+}
+
+.ngClass3 {
+  color: green;
+  font-weight: bolder;
+}

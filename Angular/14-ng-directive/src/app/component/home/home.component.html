@@ -1,0 +1,71 @@
+<h1>Home component (ngDirective tutorials)</h1>
+
+<h1>=> ngFor directive</h1>
+<h3>
+  <ul>
+    <li *ngFor="let arrNm of arrayName">{{ arrNm }}</li>
+  </ul>
+</h3>
+
+<h1>=> ngIf directive</h1>
+<div>
+  <input type="text" [(ngModel)]="id" placeholder="Enter id" />
+  <br />
+  <br />
+  <input type="text" [(ngModel)]="name" placeholder="Entjer name" />
+  <br />
+  <br />
+  <button (click)="addPerson()">Add Person</button>
+</div>
+<!-- Using of ngIf directive (if the following condition is trye then render the perticular component h3) -->
+<h3 *ngIf="arrayOfObject.length > 0; else noData">
+  <ul>
+    <!-- Here arrob is the variable & i is the index number of an element -->
+    <li *ngFor="let arrOb of arrayOfObject; let i = index">
+      {{ i }}
+      <!-- id & name are the property of arrayOfObject array -->
+      {{ arrOb.id + " : " + arrOb.name }}
+      <!-- Event to delete the perticular index of the array -->
+      <button (click)="deleteItem(i)">Delete</button>
+    </li>
+  </ul>
+</h3>
+<!-- Using the ngTemplate data which will be rendered up conditionally -->
+<ng-template #noData>
+  <h1>=> ngTemplate</h1>
+  <p>There is no data</p>
+</ng-template>
+
+<h1>=> ngSwitchCase directive</h1>
+<div>
+  <button (click)="onClick('step 1')">Step 1</button>
+  <button (click)="onClick('step 2')">Step 2</button>
+  <button (click)="onClick('step 3')">Step 3</button>
+</div>
+<divn [ngSwitch]="status">
+  <div *ngSwitchCase="'step 1'">Step 1</div>
+  <div *ngSwitchCase="'step 2'">Step 2</div>
+  <div *ngSwitchCase="'step 3'">Step 3</div>
+  <div *ngSwitchDefault>{{ status }}</div>
+</divn>
+
+<h1>=> ngStyle directive</h1>
+<h2
+  [ngStyle]="{
+    color: isActiveStyle ? 'red' : 'black',
+    textTransform: isActiveStyle ? 'uppercase' : 'lowercase'
+  }"
+>
+  Example of ngStyle
+</h2>
+
+<h1>=> ngClass directive</h1>
+<h2
+  [ngClass]="{
+    ngClass1: isActiveClass,
+    ngClass2: isActiveClass,
+    ngClass3: !isActiveClass
+  }"
+>
+  Example of ngClass
+</h2>
