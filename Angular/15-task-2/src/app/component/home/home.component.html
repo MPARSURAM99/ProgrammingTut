@@ -1,0 +1,27 @@
+<div class="form-area">
+  <input type="text" placeholder="Enter Your Name." [(ngModel)]="name" />
+  <input type="email" placeholder="Enter Your Email" [(ngModel)]="email" />
+  <textarea placeholder="Enter Your Address" [(ngModel)]="address"></textarea>
+  <button (click)="addUser()">Submit</button>
+</div>
+
+<div class="table-area">
+  <table>
+    <thead>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Action</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of userDetails; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.address }}</td>
+        <td><button (click)="deleteUser(i)">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

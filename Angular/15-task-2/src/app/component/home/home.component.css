@@ -1,0 +1,27 @@
+.form-area {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+
+  input {
+    padding: 5px;
+  }
+
+  button {
+    padding: 5px;
+  }
+}
+
+.table-area {
+  table {
+    width: auto;
+    row-gap: 10px;
+    column-gap: 10px;
+  }
+
+  th,
+  td {
+    padding: 10px;
+  }
+}
