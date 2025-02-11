@@ -1,21 +1,21 @@
 import mongoose from "mongoose";
 
-const userSchema = new mongoose.Schema({
-  user_name: {
+const cstSchema = new mongoose.Schema({
+  cst_name: {
     type: String,
     required: true,
     unique: true,
   },
-  user_email: {
+  cst_email: {
     type: String,
     required: true,
     unique: true,
   },
-  user_dob: {
+  cst_dob: {
     type: Date,
     required: true,
   },
-  user_gender: {
+  cst_gender: {
     type: String,
     required: true,
     enum: ["male", "female"],
@@ -23,5 +23,5 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-const User = mongoose.model("mbs-bloging-system-user", userSchema);
-export default User;
+const Cst = mongoose.model("mbs-bloging-system-cst", cstSchema);
+export default Cst;

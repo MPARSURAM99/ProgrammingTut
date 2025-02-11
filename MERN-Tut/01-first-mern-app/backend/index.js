@@ -2,6 +2,8 @@ import express from "express";
 import { app, connectServer } from "./server/connection.js";
 import cors from "cors";
 import userRouter from "./routes/userapi.js";
+import cstRouter from "./routes/cstapi.js";
+
 app.use(express.json());
 
 // CORS setup
@@ -10,18 +12,16 @@ const corsOptions = {
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"],
 };
-app.use(cors(corsOptions));
 
-app.use("/api/users", userRouter);
+app.use(cors(corsOptions));
 
 // Routes
 app.get("/", (req, resp) => {
   return resp.send("Welcome to the book store management project");
 });
 
-app.get("/books", (req, resp) => {
-  return resp.send("No Book Available.");
-});
+app.use("/api/users", userRouter);
+app.use("/api/cst", cstRouter);
 
 // Start server and connect to database
 (async () => {
