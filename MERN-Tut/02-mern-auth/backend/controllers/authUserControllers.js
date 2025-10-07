@@ -172,3 +172,11 @@ export const logout = (req, res) => {
         data: null,
     });
 }
+
+
+// 🧩 Controller function for handling user login requests
+export const userProfile = (req, res) => {
+    res.status(200).json({
+        user: req.user,
+    });
+}
