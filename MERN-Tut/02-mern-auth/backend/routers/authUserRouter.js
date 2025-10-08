@@ -12,7 +12,7 @@ const authUserRouter = express.Router();
 
 // Route for user registration — handles POST requests to '/register'
 // Calls the 'userRegistration' controller function
-authUserRouter.post('/register', userRegistration);
+authUserRouter.post('/signup', userRegistration);
 
 // Route for user login — handles POST requests to '/login'
 // Calls the 'userLogin' controller function

@@ -1,17 +1,33 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import axios from 'axios';
 
 function Signup() {
   const [form, setForm] = useState({ name: '', email: '', password: '' })
+  const [error, setError] = useState('')
+  const navigate = useNavigate()
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Handle signup logic here
-    alert('Signup successful!')
+    setError('')
+    try {
+      const res = await axios.post(
+        `${import.meta.env.VITE_API_URL}/auth/signup`,
+        form,
+        { withCredentials: true }
+      )
+      // On success, redirect to login or profile
+      navigate('/login')
+    } catch (err) {
+      setError(
+        err.response?.data?.message ||
+        'Signup failed. Please try again.'
+      )
+    }
   }
 
   return (
@@ -21,6 +37,9 @@ function Signup() {
         className="bg-white p-8 rounded-xl shadow-lg w-full max-w-md"
       >
         <h2 className="text-3xl font-bold text-center text-purple-700 mb-6">Sign Up</h2>
+        {error && (
+          <div className="mb-4 text-red-600 text-center font-medium">{error}</div>
+        )}
         <div className="mb-4">
           <label className="block mb-1 text-gray-700 font-medium">Name</label>
           <input
