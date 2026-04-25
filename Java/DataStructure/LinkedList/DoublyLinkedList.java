@@ -2,7 +2,7 @@ public class DoublyLinkedList {
     Node head;
     Node tail;
 
-    public void addNode(int data) {
+    public void addNodeToLast(int data) {
         Node newNode = new Node(data);
 
         if (head == null) {
@@ -15,11 +15,22 @@ public class DoublyLinkedList {
         newNode.previous = tail;
         tail = newNode;
     }
+
+    public void addNodeToFirst(int data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = tail = newNode;
+            return;
+        }
+        newNode.next = head;
+        head.previous = newNode;
+        head = newNode;
+    }
     
     public void displayForward() {
         Node temNode = head;
 
-        while (temNode.next != null) {
+        while (temNode != null) {
             System.out.println(temNode.data);
             temNode = temNode.next;
         }
@@ -27,7 +38,7 @@ public class DoublyLinkedList {
 
     public void displayBackward() {
         Node tempNode = tail;
-        while (tempNode.previous != null) {
+        while (tempNode != null) {
             System.out.println(tempNode.data);
             tempNode = tempNode.previous;
         }
@@ -36,16 +47,20 @@ public class DoublyLinkedList {
     public static void main(String[] args) {
         DoublyLinkedList dll = new DoublyLinkedList();
 
-        dll.addNode(10);
-        dll.addNode(20);
-        dll.addNode(30);
-        dll.addNode(40);
-        dll.addNode(50);
-        dll.addNode(60);
-        dll.addNode(70);
+        dll.addNodeToLast(10);
+        dll.addNodeToLast(20);
+        dll.addNodeToLast(30);
+        dll.addNodeToLast(40);
+        dll.addNodeToLast(50);
+        dll.addNodeToLast(60);
+        dll.addNodeToLast(70);
 
         dll.displayForward();
+
+        dll.addNodeToFirst(5);
         System.out.println();
+
+
         dll.displayBackward();
     }
     
